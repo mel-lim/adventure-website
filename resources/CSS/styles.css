@@ -1,0 +1,121 @@
+
+/* General styles */
+
+/* Text styles and size */
+h2 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 3rem;
+  line-height: 0.2em;
+}
+
+h3 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 2rem;
+  line-height: 0.2em;
+}
+
+h4 {
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 1.5rem;
+  line-height: 0.2em;
+}
+
+hr {
+  border-color: black;
+  line-height: 0.2em;
+}
+
+figcaption {
+  font-family: 'Monserrat', sans-serif;
+}
+
+/* Header */
+header {
+  font-family: 'Amatic SC', cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+
+/* Navigation bar */
+
+nav {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  color: grey;
+}
+
+/* Intro sections */
+#ski-touring .intro {
+  background-image: url(../images/chief_pascal_view.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+
+#ski-touring .text-container {
+  margin: 350px auto auto 65px;
+  /*border-style: dashed;*/
+  color: black;
+  background-color:hsla(0, 0%, 90%, 0.5);
+  padding: 0rem 1rem;
+  display: inline-block;
+
+}
+
+#mountain-biking .intro {
+  background-image: url(../images/elfin_lakes_chris.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 700px;
+}
+
+#mountain-biking .text-container {
+  margin: 350px auto auto 65px;
+  /*border-style: dashed;*/
+  color: black;
+  background-color:hsla(0, 0%, 90%, 0.5);
+  padding: 0rem 1rem;
+  display: inline-block;
+}
+
+
+/* Adventures */
+
+.adventures, .my-setup {
+  padding: 20px 0 25px 0;
+}
+
+.adventures .section-heading, .my-setup .section-heading {
+  text-align: center;
+}
+
+.adventure-gallery {
+  display: flex;
+}
+
+.adventures figure {
+  width: 300px;
+  border-style: dashed;
+}
+
+.adventures img {
+  width: 100%;
+}
+
+.expand-icon {
+  height: 30px;
+}
