@@ -16,17 +16,21 @@ h3 {
 
 h4 {
   font-family: 'Sue Ellen Francisco', cursive;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 0.2em;
 }
 
 hr {
-  border-color: black;
+  border-color: rgb(180, 160, 160);
   line-height: 0.2em;
 }
 
-figcaption {
-  font-family: 'Monserrat', sans-serif;
+p, figcaption {
+  font-family: 'Poiret One', cursive;
+}
+
+.item-name {
+  font-weight: bolder;
 }
 
 /* Header */
@@ -35,7 +39,6 @@ header {
   font-size: 2rem;
   text-align: center;
 }
-
 
 /* Navigation bar */
 
@@ -93,7 +96,7 @@ nav a {
 }
 
 
-/* Adventures */
+/* My adventures section */
 
 .adventures, .my-setup {
   padding: 20px 0 25px 0;
@@ -116,6 +119,73 @@ nav a {
   width: 100%;
 }
 
+/* My setup sections */
+
+.setup-items-container {
+  margin: 60px auto;
+}
+
+.setup-item {
+  width: 700px;
+  margin: auto;
+  background-color: hsla(0, 0%, 90%, 0.5);
+}
+
+.collapsed-view {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.setup-item h4 {
+  margin-left: 30px;
+}
+
 .expand-icon {
+  margin-right: 30px;
+}
+
+.skis {
   height: 30px;
+}
+
+.bike {
+  height: 40px;
+}
+
+.not-last {
+  border-bottom: 1px solid black;
+}
+
+.last {
+  border-bottom: 1px solid white;
+}
+
+/* My setup sections - expanded view */
+
+.expanded-view {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+#ski-image, #skins-image{
+  height: 300px;
+  margin-top: 15px;
+}
+
+#bindings-image {
+  height: 90px;
+  margin-top: 15px;
+}
+
+#boots-image {
+  height: 150px;
+  margin-top: 15px;
+}
+
+#rescue-package-image {
+  height: 175px;
+  margin-top: 15px;
 }
