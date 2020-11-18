@@ -157,7 +157,7 @@ nav a {
 /* My setup sections - expanded view */
 
 .expanded-view {
-  display: flex;
+  display: none;
   justify-content: space-evenly;
   align-items: flex-start;
   margin-bottom: 20px;
@@ -193,3 +193,4 @@ nav a {
 .bike-info {
   padding: 0 20px;
 }
+
