@@ -1,6 +1,14 @@
 
 /* General styles */
 
+.adventures, .my-setup {
+  padding: 20px 0 25px 0;
+}
+
+.adventures .section-heading, .my-setup .section-heading {
+  text-align: center;
+}
+
 /* Text styles and size */
 h2 {
   font-family: 'Sue Ellen Francisco', cursive;
@@ -17,7 +25,7 @@ h3 {
 h4 {
   font-family: 'Sue Ellen Francisco', cursive;
   font-size: 2rem;
-  line-height: 0.2em;
+  margin-bottom: 0.3em;
 }
 
 hr {
@@ -95,16 +103,7 @@ nav a {
   display: inline-block;
 }
 
-
 /* My adventures section */
-
-.adventures, .my-setup {
-  padding: 20px 0 25px 0;
-}
-
-.adventures .section-heading, .my-setup .section-heading {
-  text-align: center;
-}
 
 .adventure-gallery {
   display: flex;
@@ -126,7 +125,7 @@ nav a {
 }
 
 .setup-item {
-  width: 700px;
+  width: 825px;
   margin: auto;
   background-color: hsla(0, 0%, 90%, 0.5);
 }
@@ -135,29 +134,23 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-}
-
-.setup-item h4 {
   margin-left: 30px;
-}
-
-.expand-icon {
   margin-right: 30px;
 }
 
-.skis {
+.skis-icon {
   height: 30px;
 }
 
-.bike {
+.bike-icon {
   height: 40px;
 }
 
-.not-last {
+.bottom-border {
   border-bottom: 1px solid black;
 }
 
-.last {
+.no-border {
   border-bottom: 1px solid white;
 }
 
@@ -168,6 +161,7 @@ nav a {
   justify-content: space-evenly;
   align-items: flex-start;
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 #ski-image, #skins-image{
@@ -188,4 +182,14 @@ nav a {
 #rescue-package-image {
   height: 175px;
   margin-top: 15px;
+}
+
+#jaws-image, #greta-image, #lightning-image {
+  height: 150px;
+  margin-top: 15px;
+  padding: 0 20px;
+}
+
+.bike-info {
+  padding: 0 20px;
 }
