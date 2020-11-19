@@ -31,10 +31,12 @@ function showHideInfo(collapsedViewTarget, index) {
   if (expandIconTargets[index].style.transform === 'rotate(-90deg)') {
     expandIconTargets[index].style.transform = 'none';
     itemHeadingTargets[index].style.fontSize = '2rem';
+    itemHeadingTargets[index].style.marginBottom = '0.5em';
     moreInfoTargets[index].style.display = 'none';
   } else {
     expandIconTargets[index].style.transform = 'rotate(-90deg)';
     itemHeadingTargets[index].style.fontSize = '2.5rem';
+    itemHeadingTargets[index].style.marginBottom = '0.3em';
     moreInfoTargets[index].style.display = 'flex';
   }
 } //This function displays and hides the 'more info' panel when the target is clicked
