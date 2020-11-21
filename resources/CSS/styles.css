@@ -38,17 +38,21 @@ h4 {
   color: hsl(0, 0%, 45%);
 }
 
-hr {
+.intro hr {
   border: 1px solid hsl(0, 0%, 20%);
   line-height: 0.2em;
 }
 
-p, figcaption {
+p, figcaption, label {
   font-family: 'Poiret One', cursive;
 }
 
 .item-name {
   font-weight: bolder;
+}
+
+.list-panel hr {
+  border: 1px solid hsl(0, 0%, 75%);
 }
 
 /* Header */
@@ -192,3 +196,43 @@ nav li {
   padding: 0 20px;
 }
 
+/* Plan your adventure page */
+
+#activity-selection {
+  margin-top: 4em;
+  margin-left: 2rem;
+}
+
+.radio-buttons {
+  margin-left: 1rem;
+}
+
+/* Lists */
+
+.column-heading-include {
+  text-align: right;
+}
+
+.list-container {
+  width: 400px;
+  border: 1px solid black;
+  padding: 15px;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  vertical-align: top;
+  display: none;
+}
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1em;
+}
+
+.text-input-line {
+  display: flex;
+  justify-content: space-between;
+}
+
+#add-list-item {
+  margin-right: 0;
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan your adventure</title>
+
+  <!--CSS stylesheets-->
+  <link rel="stylesheet" href="resources/CSS/normalize.css">
+  <link rel="stylesheet" href="resources/CSS/styles.css">
+
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poiret+One&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--Name of website-->
+  <header>
+    <h1>mellim.io</h1>
+
+    <!--Navigation bar-->
+    <nav>
+      <ul>
+        <li><a href="#">Ski touring</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Mountain biking</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Plan your adventure</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <article id="activity-selection">
+    <h3>What adventure are we planning for today?</h3>
+    <input type="radio" id="ski-touring-radio" name="adventure-radio" value="ski-touring" class="radio-buttons">
+    <label for="ski-touring-radio">Ski touring</label><br>
+    <input type="radio" id="mountain-biking-radio" name="adventure-radio" value="mountain-biking" class="radio-buttons">
+    <label for="mountain-biking-radio">Mountain biking</label><br>
+  </article>
+
+  <!-- Lists for ski touring -->
+  <article id="ski-touring-lists">
+
+    <!-- Gear list for ski touring -->
+    <section class="list-container" id="ski-touring-gear">
+      <h3>Gear</h3>
+      <p class="column-heading-include">Include</p>
+
+      <div class="list-item">
+        <label for="rescue-list-item">Transceiver, probe and shovel</label>
+        <input type="checkbox" id="rescue-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="skis-snowboard-list-item">Touring skis/splitboard</label>
+        <input type="checkbox" id="skis-snowboard-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="skins-list-item">Skins</label>
+        <input type="checkbox" id="skins-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="poles-list-item">Poles</label>
+        <input type="checkbox" id="poles-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="boots-list-item">Boots</label>
+        <input type="checkbox" id="boots-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="helmet-list-item">Helmet</label>
+        <input type="checkbox" id="helmet-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="goggles-list-item">Goggles</label>
+        <input type="checkbox" id="goggles-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="sunglasses-list-item">Sunglasses</label>
+        <input type="checkbox" id="sunglasses-list-item" name="ski-touring-gear-item" checked>
+      </div>
+
+      <hr>
+
+      <!--EMPTY DIV TO PUT NEW LIST ITEMS-->
+      <div id="new-list-items-ski-gear"></div>
+
+      <div class="text-input-line">
+        <label for="user-input-text"><input type="text" name="ski-touring-list-item" id="user-input-text"></label>
+        <button id="add-list-item">Add</button>
+      </div>
+
+    </section>
+
+    <!-- Clothing list for ski touring --> 
+    <section class="list-container" id="ski-touring-clothing">
+
+      <h3>Clothing</h3>
+      <p class="column-heading-include">Include</p>
+
+      <div class="list-item">
+        <label for="puffy-jacket-list-item">Puffy/down jacket</label>
+        <input type="checkbox" id="skis-snowboard-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="shell-jacket-list-item">Shell jacket</label>
+        <input type="checkbox" id="skis-snowboard-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="bibs-list-item">Bibs/pants</label>
+        <input type="checkbox" id="bibs-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="baselayer-list-item">Baselayer - top and bottom</label>
+        <input type="checkbox" id="baselayer-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="midlayer-list-item">Mid-layer</label>
+        <input type="checkbox" id="midlayer-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="touring-gloves-list-item">Touring gloves</label>
+        <input type="checkbox" id="touring-gloves-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="warm-gloves-list-item">Warm gloves</label>
+        <input type="checkbox" id="warm-gloves-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="cap-list-item">Cap</label>
+        <input type="checkbox" id="cap-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <div class="list-item">
+        <label for="toque-list-item">Toque (beanie)</label>
+        <input type="checkbox" id="toque-list-item" name="ski-touring-clothing-item" checked>
+      </div>
+
+      <hr>
+
+      <!--EMPTY DIV TO PUT NEW LIST ITEMS-->
+      <div id="new-list-items-ski-clothing"></div>
+
+      <div class="text-input-line">
+        <label for="user-input-list-item"><input type="text" name="user-input-list-item" id="user-input-text"></label>
+        <button id="add-list-item">Add</button>
+      </div>
+
+
+    </section>
+
+  </article>
+
+
+
+
+
+  <!--Javascript-->
+  <script src="resources/list-maker.js"></script>
+
+</body>
+
+</html>
