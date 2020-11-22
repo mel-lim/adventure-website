@@ -43,7 +43,7 @@ h4 {
   line-height: 0.2em;
 }
 
-p, figcaption, label {
+p, figcaption, label, button {
   font-family: 'Poiret One', cursive;
 }
 
@@ -198,9 +198,25 @@ nav li {
 
 /* Plan your adventure page */
 
-#activity-selection {
-  margin-top: 4em;
+.user-question {
   margin-left: 2rem;
+  align-items: baseline;
+}
+
+#activity-selection {
+  display: flex;
+}
+
+#day-or-overnight-selection {
+  display: none;
+}
+
+.user-question input {
+  margin-left: 2em;
+}
+
+.user-question label {
+  padding-left: 0.5em;
 }
 
 .radio-buttons {
