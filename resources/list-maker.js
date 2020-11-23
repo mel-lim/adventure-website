@@ -18,7 +18,7 @@ const skiLists = {
   overnightFoodList: {
     activity:'ski',
     listTitle: 'Food (Overnight Trip)',
-    itemDisplayNames: ['1.5L water', '1x sandwich/day', '1 x portion of nuts/day', '1.5x clif bar/day', '1x apple/2days', 'Thermos of tea', '~600 calories of dehydrated meal/night', '2/3 cups of oatmeal with added dried fruit, nuts and sugar/morning', 'Coffee and tea', 'Ample chocolate/treats']
+    itemDisplayNames: ['1.5L water', '1x sandwich/day', '1 x portion of nuts/day', '1.5x clif bar/day', '1x apple/2days', 'Thermos of tea', '~500 calories of dehydrated meal/night', '2/3 cups of oatmeal with added dried fruit, nuts and sugar/morning', 'Coffee and tea', 'Ample chocolate/treats']
   },
   campingList: {
     listTitle: 'Camping',

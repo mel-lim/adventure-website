@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="plan-adventure">
 
   <!--Name of website-->
   <header>
@@ -38,32 +38,40 @@
     </nav>
   </header>
 
-  <article id="questions-for-user">
-    <section class="user-question" id="activity-selection">
-      <h3>Choose your adventure:</h3>
-      <input type="radio" id="ski-touring-radio" name="adventure-radio" value="ski-touring" class="radio-buttons">
-      <label for="ski-touring-radio">Ski touring</label>
-      <input type="radio" id="mountain-biking-radio" name="adventure-radio" value="mountain-biking" class="radio-buttons">
-      <label for="mountain-biking-radio">Mountain biking</label>
-    </section>
-    
-  <section class="user-question" id="day-or-overnight-selection">
-    <h3>Day trip or overnight trip?</h3>
-    <input type="radio" id="day-trip-radio" name="day-or-overnight-radio" value="day-trip" class="radio-buttons">
-    <label for="day-trip-radio">Day trip</label>
-    <input type="radio" id="overnight-trip-radio" name="day-or-overnight-radio" value="overnight" class="radio-buttons">
-    <label for="overnight-trip-radio">Overnight trip</label>
-  </section>
-    
-  </article>
+  <div id="whole-page-excl-header">
 
-  <!-- Container for the lists we want to display -->
-  <article id="lists-container"></article>
+    <article id="tagline">
+      <h3>Every successful adventure starts with a good list (or two!)</h3>
+    </article>
 
-  <!--Javascript-->
-  <script src="resources/list-maker-functions.js"></script>
-  <script src="resources/list-maker.js"></script>
+    <article id="questions-for-user">
+
+      <section class="user-question" id="activity-selection">
+        <h3>Choose your adventure:</h3>
+        <input type="radio" id="ski-touring-radio" name="adventure-radio" value="ski-touring" class="radio-buttons">
+        <label for="ski-touring-radio">Ski touring</label>
+        <input type="radio" id="mountain-biking-radio" name="adventure-radio" value="mountain-biking" class="radio-buttons">
+        <label for="mountain-biking-radio">Mountain biking</label>
+      </section>
+      
+      <section class="user-question" id="day-or-overnight-selection">
+        <h3>Day trip or overnight trip?</h3>
+        <input type="radio" id="day-trip-radio" name="day-or-overnight-radio" value="day-trip" class="radio-buttons">
+        <label for="day-trip-radio">Day trip</label>
+        <input type="radio" id="overnight-trip-radio" name="day-or-overnight-radio" value="overnight" class="radio-buttons">
+        <label for="overnight-trip-radio">Overnight trip</label>
+      </section>
+      
+    </article>
+
+    <!-- Container for the lists we want to display -->
+    <article id="lists-container"></article>
+
+    <!--Javascript-->
+    <script src="resources/list-maker-functions.js"></script>
+    <script src="resources/list-maker.js"></script>
   
+  </div>
 </body>
 
 </html>
