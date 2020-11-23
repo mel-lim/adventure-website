@@ -32,7 +32,8 @@ h2 {
 h3 {
   font-family: 'Sue Ellen Francisco', cursive;
   font-size: 2rem;
-  line-height: 0.2em;
+  line-height: 1.5em;
+  margin: 15px 0;
 }
 
 h4 {
@@ -78,6 +79,15 @@ nav li {
   padding: 0 0.2rem;
 }
 
+/* Scroll to top button */
+#scroll-to-top {
+  display: block;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  z-index: 99;
+}
+
 /* Intro sections */
 .intro {
   background-size: cover;
@@ -106,10 +116,14 @@ nav li {
 
 .adventure-gallery {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .adventures figure {
-  width: 300px;
+  margin-top: 1.5rem;
+  width: 250px;
 }
 
 .adventures img {
@@ -203,7 +217,7 @@ nav li {
 /* Plan your adventure page */
 
 #tagline {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 #tagline, .user-question {
