@@ -51,113 +51,19 @@
     <h3>Day trip or overnight trip?</h3>
     <input type="radio" id="day-trip-radio" name="day-or-overnight-radio" value="day-trip" class="radio-buttons">
     <label for="day-trip-radio">Day trip</label>
-    <input type="radio" id="overnight-radio" name="day-or-overnight-radio" value="overnight" class="radio-buttons">
-    <label for="overnight-radio">Overnight trip</label>
+    <input type="radio" id="overnight-trip-radio" name="day-or-overnight-radio" value="overnight" class="radio-buttons">
+    <label for="overnight-trip-radio">Overnight trip</label>
   </section>
     
   </article>
 
-  <!-- Lists for ski touring -->
-  <article id="lists-container">
-
-    <!-- Clothing list for ski touring --> 
-    <section class="list-container" id="list-ski-clothing">
-
-      <h3>Clothing</h3>
-      <p class="column-heading-include">Include</p>
-
-      <div class="list-item">
-        <button id="delete-puffy-jacket-item">x</button>
-        <label for="puffy-jacket-list-item">Puffy/down jacket</label>
-        <input type="checkbox" id="skis-snowboard-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-shell-jacket-item">x</button>
-        <label for="shell-jacket-list-item">Shell jacket</label>
-        <input type="checkbox" id="skis-snowboard-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-bibs-item">x</button>
-        <label for="bibs-list-item">Bibs/pants</label>
-        <input type="checkbox" id="bibs-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-baselayer-item">x</button>
-        <label for="baselayer-list-item">Baselayer - top and bottom</label>
-        <input type="checkbox" id="baselayer-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-midlayer-item">x</button>
-        <label for="midlayer-list-item">Mid-layer</label>
-        <input type="checkbox" id="midlayer-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-touring-gloves-item">x</button>
-        <label for="touring-gloves-list-item">Touring gloves</label>
-        <input type="checkbox" id="touring-gloves-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-warm-gloves-item">x</button>
-        <label for="warm-gloves-list-item">Warm gloves</label>
-        <input type="checkbox" id="warm-gloves-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-cap-item">x</button>
-        <label for="cap-list-item">Cap</label>
-        <input type="checkbox" id="cap-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <div class="list-item">
-        <button id="delete-toque-item">x</button>
-        <label for="toque-list-item">Toque (beanie)</label>
-        <input type="checkbox" id="toque-list-item" name="ski-touring-clothing-item" checked>
-      </div>
-
-      <hr>
-
-      <!--EMPTY DIV TO PUT NEW LIST ITEMS-->
-      <div id="new-list-items-ski-clothing"></div>
-
-      <div class="text-input-line">
-        <label for="user-input-list-item"><input type="text" name="user-input-list-item" id="user-input-text"></label>
-        <button id="add-list-item">Add</button>
-      </div>
-
-
-    </section>
-
-  </article>
-
-
-
-
+  <!-- Container for the lists we want to display -->
+  <article id="lists-container"></article>
 
   <!--Javascript-->
+  <script src="resources/list-maker-functions.js"></script>
   <script src="resources/list-maker.js"></script>
-
+  
 </body>
 
 </html>

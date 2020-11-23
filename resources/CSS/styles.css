@@ -229,6 +229,10 @@ nav li {
   text-align: right;
 }
 
+#lists-container {
+  display: flex;
+}
+
 .list-container {
   width: 400px;
   border: 1px solid black;
