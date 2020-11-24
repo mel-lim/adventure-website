@@ -54,3 +54,4 @@ collapsedViewTargets.forEach(collapsedViewTarget => {
     showHideInfo(collapsedViewTarget, index);
   });
 });
+

@@ -15,27 +15,34 @@
 
   <!--Javascript-->
   <script src="resources/main.js" defer></script>
+  <script src="resources/buttons.js" defer></script>
+  
 
 </head>
 <body>
 
-  <!--Name of website-->
   <header>
-    <h1>mellim.io</h1>
-
+    <!--Name of website-->
+    <h1><a href="#">mellim.io</a></h1>
     <!--Navigation bar-->
-    <nav>
-      <ul>
-        <li><a href="#ski-touring">Ski touring</a></li>
-        <li>&middot;</li>
-        <li><a href="#mountain-biking">Mountain biking</a></li>
-        <li>&middot;</li>
-        <li><a href="plan-adventure.html">Plan your adventure</a></li>
-        <li>&middot;</li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+    
   </header>
+
+  <nav id="sticky-nav">
+    <ul>
+      <li class="darken"><a href="#ski-touring">Ski touring</a></li>
+      <li>&middot;</li>
+      <li><a href="#mountain-biking">Mountain biking</a></li>
+      <li>&middot;</li>
+      <li><a href="plan-adventure.html">Plan your adventure</a></li>
+      <li>&middot;</li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Note to future Mel - you solved the sticky problem by taking the nav element out of the header and putting it as child of the body element. Your problem was that the nav element was sticking only within the header element, which is not what you wanted. -->
+
+  <button id="scroll-to-top">Top</button>
 
   <!--This page is split into two articles:
   (1) Ski touring; and
@@ -349,7 +356,7 @@
 
   </article>
 
-  <button id="scroll-to-top">Top</button>
+  
   
   
 <!--Remember to attribute ski and mountain bike icon in footer
