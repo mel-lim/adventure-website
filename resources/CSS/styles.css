@@ -149,7 +149,6 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
 }
 
 .adventures figure {
@@ -160,6 +159,7 @@ nav a:hover {
 .adventures img {
   width: 100%;
   border-radius: 100%;
+  margin-bottom: 10px;
 }
 
 .adventures figcaption {
@@ -325,4 +325,9 @@ nav a:hover {
 
 #add-list-item {
   margin-right: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
 }
