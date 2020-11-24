@@ -87,6 +87,11 @@ nav {
   top: 0;
   z-index: 99;
   background-color: #f9f9f9;
+  transition: transform .2s; /*transition for navbar*/
+}
+
+nav:hover{
+	transform: scale(1.3);/*zoom the navbar on hover*/
 }
 /* Note to future Mel - you solved the sticky problem by taking the nav element out of the header and putting it as child of the body element. Your problem was that the nav element was sticking only within the header element, which is not what you wanted. */
 
