@@ -3,7 +3,12 @@
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+    content="height=device-height, width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+
   <title>Plan your adventure</title>
 
   <!--CSS stylesheets-->
@@ -20,31 +25,51 @@
 
 <body id="plan-adventure">
 
-  <!--Name of website-->
   <header>
+
+    <!--Name of website-->
     <h1><a href="index.html">mellim.io</a></h1>
+
+    <!-- Hamburger navigation bar -->
+    <button id="hamburger-navigation-button">
+      <img src="resources/icons/036-square.svg" id="hamburger-close-img" alt="hamburger/close" />
+    </button>
+    <nav id="hamburger-navigation-panel">
+      <ul>
+        <li id="ski-touring-nav-item"><a href="index.html#ski-touring">Ski touring</a></li>
+        <hr>
+        <li id="mtb-nav-item"><a href="index.html#mountain-biking">Mountain biking</a></li>
+        <hr>
+        <li><a href="#" id="plan-adventure-nav-item">Plan your adventure</a></li>
+        <hr>
+        <li><a href="#" id="contact-nav-item">Contact</a></li>
+      </ul>
+    </nav>
+    <script src="resources/hamburger-navigation.js"></script>
+
   </header>
 
-  <!--Navigation bar-->
-  <nav>
+  <!--Non-mobile navigation bar-->
+  <nav id="sticky-nav">
     <ul>
-      <li><a href="index.html#ski-touring">Ski touring</a></li>
+      <li class="darken"><a href="index.html#ski-touring">Ski touring</a></li>
       <li>&middot;</li>
       <li><a href="index.html#mountain-biking">Mountain biking</a></li>
-      <li>&middot;</li>
-      <li><a href="#">Plan your adventure</a></li>
-      <li>&middot;</li>
-      <li><a href="#">Contact</a></li>
+      <li id="one-line-middot">&middot;</li>
+      <div id="nav-item-pair">
+        <li><a href="#">Plan your adventure</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Contact</a></li>
+      </div>
     </ul>
   </nav>
 
   <main>
 
-
-
     <div id="tagline-and-questions-container">
       <article id="tagline">
-        <h3>Every successful adventure starts with a good list (or two!)</h3>
+        <h3>Plan your next adventure here.</h3>
+        <h3>Every successful adventure starts with a good list (or two).</h3>
       </article>
 
       <article id="questions-for-user">
@@ -78,6 +103,14 @@
     <script src="resources/list-maker.js"></script>
 
   </main>
+
+
+  <footer>
+    <p>The UI icons were made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+        perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    <p>&#169; mellim.io</p>
+  </footer>
+
 </body>
 
 </html>

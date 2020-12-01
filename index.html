@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+    content="height=device-height, width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+
   <title>mellim.io</title>
-  
+
   <!--CSS stylesheets-->
   <link rel="stylesheet" href="resources/CSS/normalize.css">
   <link rel="stylesheet" href="resources/CSS/styles.css">
 
   <!--Google fonts-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poiret+One&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poiret+One&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
 
   <!--Javascript-->
   <script src="resources/main.js" defer></script>
   <script src="resources/buttons.js" defer></script>
-  
 
 </head>
+
 <body>
 
   <header>
-    <!--Name of website-->
+
+    <!-- Name of website -->
     <h1><a href="#">mellim.io</a></h1>
-    <!--Navigation bar-->
-    
+
+    <!-- Hamburger navigation bar -->
+    <button id="hamburger-navigation-button">
+      <img src="resources/icons/036-square.svg" id="hamburger-close-img" alt="hamburger/close" />
+    </button>
+    <nav id="hamburger-navigation-panel">
+      <ul>
+        <li id="ski-touring-nav-item"><a href="#ski-touring">Ski touring</a></li>
+        <hr>
+        <li id="mtb-nav-item"><a href="#mountain-biking">Mountain biking</a></li>
+        <hr>
+        <li><a href="plan-adventure.html" id="plan-adventure-nav-item">Plan your adventure</a></li>
+        <hr>
+        <li><a href="#" id="contact-nav-item">Contact</a></li>
+      </ul>
+    </nav>
+    <script src="resources/hamburger-navigation.js"></script>
   </header>
 
+  <!--Non-mobile navigation bar-->
   <nav id="sticky-nav">
     <ul>
       <li class="darken"><a href="#ski-touring">Ski touring</a></li>
       <li>&middot;</li>
       <li><a href="#mountain-biking">Mountain biking</a></li>
-      <li>&middot;</li>
-      <li><a href="plan-adventure.html">Plan your adventure</a></li>
-      <li>&middot;</li>
-      <li><a href="#">Contact</a></li>
+      <li id="one-line-middot">&middot;</li>
+      <div id="nav-item-pair">
+        <li><a href="plan-adventure.html">Plan your adventure</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Contact</a></li>
+      </div>
     </ul>
   </nav>
 
   <!-- Note to future Mel - you solved the sticky problem by taking the nav element out of the header and putting it as child of the body element. Your problem was that the nav element was sticking only within the header element, which is not what you wanted. -->
 
+  <!-- Button for scrolling to the top of the document -->
   <button id="scroll-to-top">Top</button>
 
   <!--This page is split into two articles:
@@ -72,30 +100,38 @@
       </div>
 
       <div class="adventure-gallery">
-  
-        <figure>
-          <img src="resources/images/round_mountain.jpeg" alt="Skinning up to Round Mountain" />
-          <figcaption>Round Mountain,</figcaption>
-          <figcaption>Garibaldi Provincial Park</figcaption>
-        </figure>
 
-        <figure>
-          <img src="resources/images/chief_pascal.jpeg" alt="Skiing at Mt Chief Pascall" />
-          <figcaption>Mt Chief Pascall,</figcaption>
-          <figcaption>Joffre Group, Lilloet Range</figcaption>
-        </figure>
-  
-        <figure>
-          <img src="resources/images/hanging_lake.jpeg" alt="Skinning up to Hanging Lake" />
-          <figcaption>Hanging Lake,</figcaption>
-          <figcaption>Callaghan Lake Provincial Park</figcaption>
-        </figure>
-        
-        <figure>
-          <img src="resources/images/musical_bumps.jpeg" alt="Skinning at the Musical Bumps" />
-          <figcaption>Musical Bumps,</figcaption>
-          <figcaption>Whistler Mountain</figcaption>
-        </figure>
+        <div class="figure-pair-container">
+
+          <figure>
+            <img src="resources/images/round_mountain.jpeg" alt="Skinning up to Round Mountain" />
+            <figcaption>Round Mountain,</figcaption>
+            <figcaption>Garibaldi Provincial Park</figcaption>
+          </figure>
+
+          <figure>
+            <img src="resources/images/chief_pascal.jpeg" alt="Skiing at Mt Chief Pascall" />
+            <figcaption>Mt Chief Pascall,</figcaption>
+            <figcaption>Joffre Group, Lilloet Range</figcaption>
+          </figure>
+
+        </div>
+
+        <div class="figure-pair-container">
+
+          <figure>
+            <img src="resources/images/hanging_lake.jpeg" alt="Skinning up to Hanging Lake" />
+            <figcaption>Hanging Lake,</figcaption>
+            <figcaption>Callaghan Lake Provincial Park</figcaption>
+          </figure>
+
+          <figure>
+            <img src="resources/images/musical_bumps.jpeg" alt="Skinning at the Musical Bumps" />
+            <figcaption>Musical Bumps,</figcaption>
+            <figcaption>Whistler Mountain</figcaption>
+          </figure>
+
+        </div>
 
       </div>
     </section>
@@ -111,10 +147,11 @@
         <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-skis">
-            <h4 id="item-heading-skis">Skis</h4>
-            <img class="expand-icon skis-icon" id="ski-expand-icon" src="resources/icons/ski.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-skis">Skis</h4>
+            <img class="expand-icon skis-icon" id="ski-expand-icon" src="resources/icons/ski.svg"
+              alt="Expand for info" />
           </div>
-          
+
           <div class="expanded-view" id="more-info-skis">
             <img src="resources/images/rossignol_soul_7.jpg" alt="Rossignol Soul 7 HD skis" id="ski-image" />
             <div class="expanded-text-container">
@@ -125,18 +162,20 @@
               <p>Season: 2018/2019</p>
             </div>
           </div>
-        
+
         </div>
 
         <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-bindings">
-            <h4 id="item-heading-bindings">Bindings</h4>
-            <img class="expand-icon skis-icon" id="bindings-expand-icon" src="resources/icons/ski.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-bindings">Bindings</h4>
+            <img class="expand-icon skis-icon" id="bindings-expand-icon" src="resources/icons/ski.svg"
+              alt="Expand for info" />
           </div>
-        
+
           <div class="expanded-view" id="more-info-bindings">
-            <img src="resources/images/dynafit_tlt_speedfit_10.jpg" alt="Dynafit TLT Speedfit 10 bindings" id="bindings-image" />
+            <img src="resources/images/dynafit_tlt_speedfit_10.jpg" alt="Dynafit TLT Speedfit 10 bindings"
+              id="bindings-image" />
             <div class="expanded-text-container">
               <p class="item-name">Dynafit TLT Speedfit 10 (used with brakes)</p>
               <p>Type: AT (Alpine Touring) "tech" bindings</p>
@@ -148,11 +187,12 @@
           </div>
         </div>
 
-        <div class="setup-item bottom-border"> 
+        <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-boots">
-            <h4 id="item-heading-boots">Boots</h4>
-            <img class="expand-icon skis-icon" id="boots-expand-icon" src="resources/icons/ski.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-boots">Boots</h4>
+            <img class="expand-icon skis-icon" id="boots-expand-icon" src="resources/icons/ski.svg"
+              alt="Expand for info" />
           </div>
 
           <div class="expanded-view" id="more-info-boots">
@@ -162,10 +202,10 @@
               <p>Shell material: Carbon-infused Grilamid web-frame</p>
               <p>Flex Index: 100</p>
               <p>Walk Mode: Yes</p>
-              <p>Liner Material	
+              <p>Liner Material
                 Intuition foam
-                </p>
-              <p>Moldable Liner	
+              </p>
+              <p>Moldable Liner
                 Custom Moldable</p>
               <p>Weight: 1250g</p>
               <p>Season: 2017/2018</p>
@@ -177,12 +217,14 @@
         <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-skins">
-            <h4 id="item-heading-skins">Skins</h4>
-            <img class="expand-icon skis-icon" id="skins-expand-icon" src="resources/icons/ski.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-skins">Skins</h4>
+            <img class="expand-icon skis-icon" id="skins-expand-icon" src="resources/icons/ski.svg"
+              alt="Expand for info" />
           </div>
 
           <div class="expanded-view" id="more-info-skins">
-            <img src="resources/images/g3_alpinist_plus_universal.jpg" alt="G3 Alpinist Plus Universal skins, rolled" id="skins-image" />
+            <img src="resources/images/g3_alpinist_plus_universal.jpg" alt="G3 Alpinist Plus Universal skins, rolled"
+              id="skins-image" />
             <div class="expanded-text-container">
               <p class="item-name">G3 Alpinist+ Universal Skins</p>
               <p>Size: X Short - 150-166cm</p>
@@ -198,12 +240,14 @@
         <div class="setup-item no-border">
 
           <div class="collapsed-view" id="collapsed-view-rescue">
-            <h4 id="item-heading-rescue">Transceiver, shovel and probe</h4>
-            <img class="expand-icon skis-icon" id="rescue-expand-icon" src="resources/icons/ski.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-rescue">Transceiver, shovel and probe</h4>
+            <img class="expand-icon skis-icon" id="rescue-expand-icon" src="resources/icons/ski.svg"
+              alt="Expand for info" />
           </div>
 
           <div class="expanded-view" id="more-info-rescue">
-            <img src="resources/images/bca-t3-rescue-package.jpg" alt="BCA T3 transceiver, probe and shovel" id="rescue-package-image" />
+            <img src="resources/images/bca-t3-rescue-package.jpg" alt="BCA T3 transceiver, probe and shovel"
+              id="rescue-package-image" />
             <div class="expanded-text-container">
               <p class="item-name">BCA T3 Avalanche Rescue Package</p>
               <p>Tracker3 avalanche transceiver</p>
@@ -240,29 +284,38 @@
       </div>
 
       <div class="adventure-gallery">
-        <figure>
-          <img src="resources/images/elfin_lakes.jpeg" alt="Lifting bike on the Elfin Lakes trail" />
-          <figcaption>Elfin Lakes,</figcaption>
-          <figcaption>Garibaldi Provincial Park</figcaption>
-        </figure>
-  
-        <figure>
-          <img src="resources/images/leave_of_absence.jpeg" alt="Riding down woodwork on Leave of Absence" />
-          <figcaption>'Leave of Absence',</figcaption>
-          <figcaption>Alice Lake</figcaption>
-        </figure>
-  
-        <figure>
-          <img src="resources/images/lots.jpeg" alt="Approaching Tonic Lake" />
-          <figcaption>'Lord of the Squirrels',</figcaption>
-          <figcaption>Whistler Westside Trails</figcaption>
-        </figure>
-        
-        <figure>
-          <img src="resources/images/whistler_bike_park.jpeg" alt="At the Whistler Bike Park" />
-          <figcaption>Whistler Bike Park,</figcaption>
-          <figcaption>Whistler Mountain</figcaption>
-        </figure>
+
+        <div class="figure-pair-container">
+
+          <figure>
+            <img src="resources/images/elfin_lakes.jpeg" alt="Lifting bike on the Elfin Lakes trail" />
+            <figcaption>Elfin Lakes,</figcaption>
+            <figcaption>Garibaldi Provincial Park</figcaption>
+          </figure>
+
+          <figure>
+            <img src="resources/images/leave_of_absence.jpeg" alt="Riding down woodwork on Leave of Absence" />
+            <figcaption>'Leave of Absence',</figcaption>
+            <figcaption>Alice Lake</figcaption>
+          </figure>
+
+        </div>
+
+        <div class="figure-pair-container">
+
+          <figure>
+            <img src="resources/images/lots.jpeg" alt="Approaching Tonic Lake" />
+            <figcaption>'Lord of the Squirrels',</figcaption>
+            <figcaption>Whistler Westside Trails</figcaption>
+          </figure>
+
+          <figure>
+            <img src="resources/images/whistler_bike_park.jpeg" alt="At the Whistler Bike Park" />
+            <figcaption>Whistler Bike Park,</figcaption>
+            <figcaption>Whistler Mountain</figcaption>
+          </figure>
+
+        </div>
 
       </div>
     </section>
@@ -279,12 +332,14 @@
         <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-jaws">
-            <h4 id="item-heading-jaws">"Jaws", my downhill bike</h4>
-            <img class="expand-icon bike-icon" id="jaws-expand-icon" src="resources/icons/mountain-bike.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-jaws">"Jaws", my downhill bike</h4>
+            <img class="expand-icon bike-icon" id="jaws-expand-icon" src="resources/icons/mountain-bike.svg"
+              alt="Expand for info" />
           </div>
 
-          <div class="expanded-view" id="more-info-jaws">
-            <img src="resources/images/kona_entourage.jpg" alt="Kona Entourage downhill mountain bike" id="jaws-image" />
+          <div class="expanded-view expanded-view-bike" id="more-info-jaws">
+            <img src="resources/images/kona_entourage.jpg" alt="Kona Entourage downhill mountain bike"
+              id="jaws-image" />
             <div class="expanded-text-container bike-info">
               <p class="item-name">Kona Entourage 2014</p>
               <p>Size: Small</p>
@@ -300,16 +355,18 @@
           </div>
 
         </div>
-  
+
         <div class="setup-item bottom-border">
 
           <div class="collapsed-view" id="collapsed-view-greta">
-            <h4 id="item-heading-greta">"Greta", my enduro bike</h4>
-            <img class="expand-icon bike-icon" id="greta-expand-icon" src="resources/icons/mountain-bike.svg" alt="Expand for info" />
+            <h4 class="setup-item-heading" id="item-heading-greta">"Greta", my enduro bike</h4>
+            <img class="expand-icon bike-icon" id="greta-expand-icon" src="resources/icons/mountain-bike.svg"
+              alt="Expand for info" />
           </div>
 
-          <div class="expanded-view" id="more-info-greta">
-            <img src="resources/images/gt_force_garbo.jpg" alt="GT Force Garbo edition all-mountain bike" id="greta-image" />
+          <div class="expanded-view expanded-view-bike" id="more-info-greta">
+            <img src="resources/images/gt_force_garbo.jpg" alt="GT Force Garbo edition all-mountain bike"
+              id="greta-image" />
             <div class="expanded-text-container bike-info">
               <p class="item-name">GT Force 2019 - Garbo Edition</p>
               <p>Size: Small</p>
@@ -319,21 +376,22 @@
               <p>Head tube angle: 65-65.5<span>&#176;</span></p>
               <p>Forks: Rockshox Lyrik RC 2019 with 160mm of of travel</p>
               <p>Shock: Rockshox Super Deluxe Select 2019</p>
-              <p>Drivetrain: Sram NX Eagle 12-speed derailleur, with PG-1230 cassette and 32t chainring</p>              
+              <p>Drivetrain: Sram NX Eagle 12-speed derailleur, with PG-1230 cassette and 32t chainring</p>
               <p>Weight: 16.1kg</p>
             </div>
           </div>
-          
+
         </div>
-        
+
         <div class="setup-item no-border">
 
           <div class="collapsed-view" id="collapsed-view-lightning">
             <h4 id="item-heading-lightning">"Black Lightning", my starter bike</h4>
-            <img class="expand-icon bike-icon" id="lightning-expand-icon" src="resources/icons/mountain-bike.svg" alt="Expand for info" />
+            <img class="expand-icon bike-icon" id="lightning-expand-icon" src="resources/icons/mountain-bike.svg"
+              alt="Expand for info" />
           </div>
 
-          <div class="expanded-view" id="more-info-lightning">
+          <div class="expanded-view expanded-view-bike" id="more-info-lightning">
             <img src="resources/images/norco_sight.jpg" alt="Norco Sight 2 all-mountain bike" id="lightning-image" />
             <div class="expanded-text-container bike-info">
               <p class="item-name">Norco Sight 2 2013</p>
@@ -348,18 +406,24 @@
               <p>Weight: 15kg</p>
             </div>
           </div>
-          
+
         </div>
 
-      </div>  
+      </div>
     </section>
 
   </article>
 
+
+
+  <footer>
+    <p>The little skis and bike icons were made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a
+        href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    <p>The UI icons were made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+        perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+    <p>&#169; mellim.io</p>
+  </footer>
+
 </body>
 
-<footer>
-  <p>The little skis and bike icons were made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-  <p>&#169; mellim.io</p>
-</footer>
 </html>
