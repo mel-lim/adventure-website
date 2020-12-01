@@ -272,6 +272,20 @@ nav a:hover {
   padding: 0 20px;
 }
 
+/* Footer */
+main {
+  position: relative;
+  min-height: 75vh;
+}
+
+footer {
+  position: 
+  width: 90%;
+  text-align: center;
+  height: 55px;
+  margin: 0 5%;
+}
+
 /* Plan your adventure page */
 
 #plan-adventure main {
@@ -284,7 +298,7 @@ nav a:hover {
   background-color: hsl(0, 0%, 95%);
   padding-left: 2em;
   padding-right: 2em;
-  margin-bottom: 2em;
+  margin: 1rem 2rem 2em 2rem;
 }
 
 #tagline {
@@ -333,7 +347,7 @@ nav a:hover {
   width: 400px;
   border: 1px solid black;
   padding: 15px;
-  margin: 1rem 0 2rem 1rem;
+  margin: 1rem 2rem 1rem 2rem;
   vertical-align: top;
   background-color: hsl(0, 0%, 95%);
   text-align: center;
@@ -352,11 +366,6 @@ nav a:hover {
 
 #add-list-item {
   margin-right: 0;
-}
-
-/* Footer */
-footer {
-  text-align: center;
 }
 
 /* Natural breakpoint at 820px */

@@ -43,6 +43,9 @@ skiTouringNavItemTarget.addEventListener('click', function() {
 mtbNavItemTarget.addEventListener('click', function() {
   setTimeout(expandHideNav, 750);
 });
+planAdventureNavItemTarget.addEventListener('click', function() {
+  setTimeout(expandHideNav, 750);
+});
 contactNavItemTarget.addEventListener('click', function() {
   setTimeout(expandHideNav, 750);
 });
