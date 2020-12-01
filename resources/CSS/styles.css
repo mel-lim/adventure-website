@@ -121,18 +121,36 @@ nav a:hover {
 }
 
 /* Scroll to top button */
+
 #scroll-to-top {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 15px;
   right: 20px;
   z-index: 99;
   cursor: pointer;
   padding: 0.4em;
+  border: transparent;
+  background-color: #f9f9f9;
+  width: 39px;
+  height: 39px;
+  border-radius: 10%;
 }
 
 #scroll-to-top:hover {
-  font-weight: bold;
+  background-color: hsla(0, 0%, 90%, 0.5);
+}
+
+#scroll-to-top img {
+  width: 39px;
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  opacity: 0.8;
+}
+
+#scroll-to-top img:hover {
+  opacity: 1;
 }
 
 /* Intro sections */
