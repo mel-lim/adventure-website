@@ -77,9 +77,13 @@ header {
 
 /* Navigation bar */
 
-#sticky-nav {
+nav li {
   list-style-type: none; /* Remove bullets */
-  padding: 0.6em 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+#sticky-nav {
+  padding: 0.6em 0;
   margin: 0; /* Remove margins */
   text-align: center;
   position: sticky;
@@ -108,7 +112,11 @@ nav a:hover {
 }
 
 /* Hamburger navigation bar */
-#hamburger-nav {
+#hamburger-navigation-panel {
+  display: none;
+}
+
+#hamburger-navigation-button {
   display: none;
 }
 
@@ -384,7 +392,7 @@ footer {
   }
 }
 
-/* Next natural breakpoint is at 620px */
+/* Next natural breakpoint is at 625px */
 @media only screen and (max-width: 625px) {
 
   /* Navigation menu */
@@ -441,12 +449,28 @@ footer {
     display: none;
   }
 
-  #hamburger-nav {
+  #hamburger-navigation-button {
     display: block;
+    border: transparent;
+    background-color: transparent;
   }
 
-  #hamburger-nav img{
+  #hamburger-navigation-button img{
     width: 39px;
+  }
+
+  nav ul {
+    padding: 20px;
+    margin: 0;
+    text-align: left;
+  }
+
+  #hamburger-navigation-panel {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    top: 65px;
+    right: 0;
   }
 
   /* Intro sections */
