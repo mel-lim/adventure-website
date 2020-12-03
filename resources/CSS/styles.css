@@ -395,26 +395,27 @@ footer {
 /* Contact page */
 #contact-page-main {
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #contact-me-text-container {
   display: inline-block;
   border: 1px solid black;
   background-color: hsl(0, 0%, 95%);
-  padding-left: 2em;
-  padding-right: 2em;
-  margin: 1rem 2rem 2em 2rem;
-  max-width: 600px;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 1rem 0 2rem 0;
+  max-width: 800px;
 }
 
 #form-container {
   max-width: 600px;
   border: 1px solid black;
-  padding: 15px 15px 30px 15px;
-  margin: 15px auto 40px auto;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
   vertical-align: top;
   background-color: hsl(0, 0%, 95%);
   text-align: center;
+  margin: 1rem auto 2rem auto;
 }
 
 #contact-form {
@@ -424,14 +425,19 @@ footer {
 }
 
 .form-row {
-  width: 90%;
+  width: 94%;
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
 }
 
-#name, #email-address {
-  width: 45%;
+#name {
+  width: 37%;
+  margin-right: 3%;
+}
+
+#email-address {
+  width: 50%;
 }
 
 #subject {
@@ -598,5 +604,11 @@ input[type=submit]:hover {
 
   .adventures figure {
     width: 70%;
+  }
+
+  /* Contact page */
+
+  #contact-form input[type=text], #contact-form textarea {
+    font-size: 0.8rem;
   }
 }
