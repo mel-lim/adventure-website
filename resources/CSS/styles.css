@@ -237,10 +237,6 @@ nav a:hover {
   padding-bottom: 0;
 }
 
-.collapsed-view-bike {
-  align-items: baseline;
-}
-
 .skis-icon {
   height: 30px;
   opacity: 0.6;
@@ -327,7 +323,7 @@ footer {
 #tagline-and-questions-container {
   display: inline-block;
   border: 1px solid black;
-  background-color: hsl(0, 4%, 95%);
+  background-color: hsl(0, 0%, 95%);
   padding-left: 2em;
   padding-right: 2em;
   margin: 1rem 2rem 2em 2rem;
@@ -649,7 +645,6 @@ width: 14px;
     height: 32.5px;
     opacity: 0.6;
   }
-  
 
   /* Contact page */
 
