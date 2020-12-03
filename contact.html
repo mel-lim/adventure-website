@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+    content="height=device-height, width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+
+  <title>Contact</title>
+
+  <!--CSS stylesheets-->
+  <link rel="stylesheet" href="resources/CSS/normalize.css">
+  <link rel="stylesheet" href="resources/CSS/styles.css">
+
+  <!--Google fonts-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poiret+One&family=Sue+Ellen+Francisco&display=swap"
+    rel="stylesheet">
+
+  <!--Javascript-->
+
+</head>
+
+<body>
+
+  <header>
+
+    <!-- Name of website -->
+    <h1><a href="#">mellim.io</a></h1>
+
+    <!-- Hamburger navigation bar -->
+    <button id="hamburger-navigation-button">
+      <img src="resources/icons/036-square.svg" id="hamburger-close-img" alt="hamburger/close" />
+    </button>
+    <nav id="hamburger-navigation-panel">
+      <ul>
+        <li id="ski-touring-nav-item"><a href="index.html#ski-touring">Ski touring</a></li>
+        <hr>
+        <li id="mtb-nav-item"><a href="index.html#mountain-biking">Mountain biking</a></li>
+        <hr>
+        <li><a href="plan-adventure.html" id="plan-adventure-nav-item">Plan your adventure</a></li>
+        <hr>
+        <li><a href="#" id="contact-nav-item">Contact</a></li>
+      </ul>
+    </nav>
+    <script src="resources/hamburger-navigation.js"></script>
+  </header>
+
+  <!--Non-mobile navigation bar-->
+  <nav id="sticky-nav">
+    <ul>
+      <li class="darken"><a href="index.html#ski-touring">Ski touring</a></li>
+      <li>&middot;</li>
+      <li><a href="index.html#mountain-biking">Mountain biking</a></li>
+      <li id="one-line-middot">&middot;</li>
+      <div id="nav-item-pair">
+        <li><a href="plan-adventure.html">Plan your adventure</a></li>
+        <li>&middot;</li>
+        <li><a href="#">Contact</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <main id="contact-page-main">
+
+    <div id="contact-me-text-container">
+      <h3>Contact me</h3>
+      <h3 class="lighter-weight">If you would like to leave feedback, make suggestions for improvement...</h3>
+      <h3 class="lighter-weight">... or if you just wanted to say, "Hello, I saw your site..."</h3>
+      <h3 class="lighter-weight">... please do send me a note.</h3>
+      <h3 class="lighter-weight">I would be so thrilled to hear from you!</h3>
+    </div>
+
+    <div id="form-container">
+      <h3>Your note goes right here...</h3>
+      <form method="post" action="resources/send-message.php" id="contact-form" name="email-form">
+
+        <div class="form-row">
+          <input type="text" id="name" name="name" placeholder="Your name...">
+          <input type="text" id="email-address" name="email-address" placeholder="Your email address...">
+        </div>
+
+        <div class="form-row">
+          <input type="text" id="subject" name="subject" placeholder="Subject...">
+        </div>
+
+        <div class="form-row">
+          <textarea id="message" name="message" placeholder="Your message..."></textarea>
+        </div>
+
+        <div class="form-row" id="submit-row">
+          <input type="submit" value="Send message">
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <p>&#169; mellim.io</p>
+  </footer>
+
+</body>
+
+</html>

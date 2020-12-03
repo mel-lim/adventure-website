@@ -58,12 +58,21 @@ h4 {
   line-height: 0.2em;
 }
 
-p, figcaption, label, button {
+p, figcaption, label, button, input[type=text], textarea{
   font-family: 'Poiret One', cursive;
+}
+
+input[type=submit] {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.25rem;
 }
 
 .item-name {
   font-weight: bolder;
+}
+
+.lighter-weight {
+  font-weight: lighter;
 }
 
 .list-panel hr {
@@ -313,7 +322,7 @@ footer {
 #tagline-and-questions-container {
   display: inline-block;
   border: 1px solid black;
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 4%, 95%);
   padding-left: 2em;
   padding-right: 2em;
   margin: 1rem 2rem 2em 2rem;
@@ -389,6 +398,89 @@ footer {
 #add-list-item {
   margin-right: 0;
 }
+
+/* Contact page */
+#contact-page-main {
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+#contact-me-text-container {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 95%);
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  margin: 1rem 0 2rem 0;
+  max-width: 800px;
+}
+
+#form-container {
+  max-width: 600px;
+  border: 1px solid black;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  vertical-align: top;
+  background-color: hsl(0, 0%, 95%);
+  text-align: center;
+  margin: 1rem auto 2rem auto;
+}
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  width: 94%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#name {
+  width: 37%;
+  margin-right: 3%;
+}
+
+#email-address {
+  width: 50%;
+}
+
+#subject {
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+}
+
+#contact-form input[type=text], #contact-form textarea {
+  padding: 5px 10px;
+}
+
+#contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#submit-row {
+  justify-content: flex-end;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  color: hsl(0, 0%, 30%);
+  padding: 5px 20px;
+  border: 1.5px solid hsl(0, 0%, 30%);
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  font-weight: bolder;
+}
+
+input[type=submit]:hover {
+  color: black;
+  border-color: black;  
 
 .delete-button, .add-button {
   background-size: cover;
@@ -544,5 +636,11 @@ width: 14px;
 
   .adventures figure {
     width: 70%;
+  }
+
+  /* Contact page */
+
+  #contact-form input[type=text], #contact-form textarea {
+    font-size: 0.8rem;
   }
 }
