@@ -249,6 +249,8 @@ nav a:hover {
 .bike-icon {
   height: 40px;
   opacity: 0.6;
+  position: relative;
+  top: 6.5px;
 }
 
 .bottom-border {
@@ -635,6 +637,19 @@ width: 14px;
   .adventures figure {
     width: 70%;
   }
+
+  /* My setup sections */
+
+  .skis-icon {
+    height: 25px;
+    opacity: 0.6;
+  }
+  
+  .bike-icon {
+    height: 32.5px;
+    opacity: 0.6;
+  }
+  
 
   /* Contact page */
 
