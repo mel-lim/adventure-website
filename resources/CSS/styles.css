@@ -132,7 +132,7 @@ nav a:hover {
 /* Scroll to top button */
 
 #scroll-to-top {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 15px;
   right: 20px;
@@ -359,6 +359,13 @@ footer {
   margin-bottom: 1rem;
 }
 
+.test-button {
+  width: 25px;
+  height: 25px;
+  background-image: url('../icons/016-crossed.svg');
+  background-size: cover;
+}
+
 /* Lists */
 
 #lists-container {
@@ -380,7 +387,7 @@ footer {
 .list-item {
   display: flex;
   justify-content: space-between;
-  margin-right: 1em;
+  align-items: center;
 }
 
 .text-input-line {
@@ -474,6 +481,31 @@ input[type=submit] {
 input[type=submit]:hover {
   color: black;
   border-color: black;  
+
+.delete-button, .add-button {
+  background-size: cover;
+  flex-shrink: 0;
+  border: none;
+}
+
+.delete-button {
+background-image: url('../icons/066-erase.svg');
+height: 14px;
+width: 14px;
+}
+
+.add-button {
+  height: 24px;
+  width: 24px;
+  background-image: url('../icons/059-plus\ sign.svg');
+}
+
+.delete-button:hover, .add-button:hover {
+  background-color: #f9f9f9;
+}
+
+.item-display-name {
+  margin: 0 10px;
 }
 
 /* Natural breakpoint at 820px */

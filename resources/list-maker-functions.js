@@ -23,7 +23,7 @@ function deleteListItem(listItemTarget, associatedHrTarget) {
 function createDeleteButtonListener(itemId, activity, listTitleId) {
   const deleteButtonTarget = $(`delete-${itemId}-${activity}-${listTitleId}`);
   const listItemTarget = $(`container-${itemId}-${activity}-${listTitleId}`);
-    const associatedHrTarget = $(`hr-${itemId}-${activity}-${listTitleId}`);
+  const associatedHrTarget = $(`hr-${itemId}-${activity}-${listTitleId}`);
   deleteButtonTarget.addEventListener('click', function() {
     deleteListItem(listItemTarget, associatedHrTarget);
   });
@@ -50,20 +50,36 @@ function addItemToList(activity, listTitleId, userInputTextTarget) {
 
   // Generate HTML code to display the new user-inputted item, in the list.
   // The HTML code includes a delete button for the new item.
-  const userInputHtml = `<div class="list-item" id="container-${itemNumber}-${activity}-${listTitleId}">
-    <button id="delete-${itemNumber}-${activity}-${listTitleId}">x</button>
-    <label for="item-${itemNumber}-${activity}-${listTitleId}">${userInputTextTarget.value}</label>
-    <input type="checkbox" id="item-${itemNumber}-${activity}-${listTitleId}" name="item-${activity}-${listTitleId}" checked>
-  </div>
-  <hr id="hr-${itemNumber}-${activity}-${listTitleId}">
-  `;
+  const div = document.createElement('div');
+  div.className = 'list-item';
+  div.id = `container-${itemNumber}-${activity}-${listTitleId}`;
 
-  // Code for edit button - a 'do later' task
+  const button = document.createElement('button');
+  button.className = 'delete-button';
+  button.id = `delete-${itemNumber}-${activity}-${listTitleId}`;
+  div.appendChild(button);
+
+  const label = document.createElement('label');
+  label.setAttribute('for', `item-${itemNumber}-${activity}-${listTitleId}`);
+  label.innerHTML = `${userInputTextTarget.value}`;
+  div.appendChild(label);
+
+  const input = document.createElement('input');
+  input.setAttribute('type', 'checkbox');
+  input.id = `item-${itemNumber}-${activity}-${listTitleId}`;
+  input.setAttribute('name', `item-${activity}-${listTitleId}`);
+  input.setAttribute('checked', '');
+  div.appendChild(input);
+
+  const hr = document.createElement('hr');
+  hr.id = `hr-${itemNumber}-${activity}-${listTitleId}`;
+
+  // Starting code for edit button - a 'do later' task
   // <button id="edit-${itemNumber}-${activity}-${listTitleId}">Edit</button>
 
   // Insert the HTML string into the relevant spot in our DOM.
   const newListItemTarget = $(`new-list-items-${activity}-${listTitleId}`);
-  newListItemTarget.insertAdjacentHTML('beforeend', userInputHtml);
+  newListItemTarget.append(div, hr);
 
   // Call the function to create an event listener for the delete button
   createDeleteButtonListener(itemNumber, activity, listTitleId);
@@ -82,7 +98,7 @@ function addItemToList(activity, listTitleId, userInputTextTarget) {
 (2) When the user hits the enter key */
 const createAddListItemListeners = (activity, listTitleId) => {
   const addButtonTarget = $(`add-button-${activity}-${listTitleId}`);
-  const userInputTextTarget = $(`user-input-text-${activity}-${listTitleId}`)
+  const userInputTextTarget = $(`user-input-text-${activity}-${listTitleId}`);
   addButtonTarget.addEventListener('click', function() {
     addItemToList(activity, listTitleId, userInputTextTarget);
   });
@@ -105,33 +121,73 @@ const renderList = (listName) => {
   const itemIds = itemDisplayNames.map(itemDisplayName => itemDisplayName.toLowerCase().replace(/\s+|[,\/\(\)-]/g, '-'));
 
   // Generate the html to render the list
-  const startListHtml = `<section class="list-container" id="list-${activity}-${listTitleId}">
-  <h3>${listTitle}</h3>`;
-  const endListHtml = '</section>';
+
+  const section = document.createElement('section');
+  section.className = 'list-container';
+  section.id = `list-${activity}-${listTitleId}`;
+
+  const h3 = document.createElement('h3');
+  h3.innerHTML = `${listTitle}`;
+  section.appendChild(h3);
   
-  let listItemsHtml = '';
   for (let i=0; i<itemDisplayNames.length; i++) {
-    listItemsHtml += `
-    <div class="list-item" id="container-${itemIds[i]}-${activity}-${listTitleId}">
-      <button id="delete-${itemIds[i]}-${activity}-${listTitleId}">x</button>
-      <label for="item-${itemIds[i]}-${activity}-${listTitleId}">${itemDisplayNames[i]}</label>
-      <input type="checkbox" id="item-${itemIds[i]}-${activity}-${listTitleId}" name="item-${activity}-${listTitleId}" checked>
-    </div>
-    <hr id="hr-${itemIds[i]}-${activity}-${listTitleId}">`;
+    const listItemDiv = document.createElement('div');
+    listItemDiv.className = 'list-item';
+    listItemDiv.id = `container-${itemIds[i]}-${activity}-${listTitleId}`;
+    section.appendChild(listItemDiv);
+
+    const button = document.createElement('button');
+    button.className = 'delete-button';
+    button.id = `delete-${itemIds[i]}-${activity}-${listTitleId}`;
+    listItemDiv.appendChild(button);
+
+    const itemLabel = document.createElement('label');
+    itemLabel.setAttribute('for', `item-${itemIds[i]}-${activity}-${listTitleId}`);
+    itemLabel.className = "item-display-name";
+    itemLabel.innerHTML = `${itemDisplayNames[i]}`;
+    listItemDiv.appendChild(itemLabel);
+
+    const checkboxInput = document.createElement('input');
+    checkboxInput.setAttribute('type', 'checkbox');
+    checkboxInput.id = `item-${itemIds[i]}-${activity}-${listTitleId}`;
+    checkboxInput.setAttribute('name', `item-${activity}-${listTitleId}`);
+    listItemDiv.appendChild(checkboxInput);
+
+    const hr = document.createElement('hr');
+    hr.id = `hr-${itemIds[i]}-${activity}-${listTitleId}`;
+    section.appendChild(hr);
   }
 
   // Creates an empty container to display new user-added list items
   // Renders text box for user input to add new items to the list
-  const userListItemsHtml = `<div id="new-list-items-${activity}-${listTitleId}"></div>
-  <div class="text-input-line">
-    <label for="user-input-text"><input type="text" name="item-${activity}-${listTitleId}" id="user-input-text-${activity}-${listTitleId}"></label>
-    <button id="add-button-${activity}-${listTitleId}">Add</button>
-  </div>`;
+
+  const newItemDiv = document.createElement('div');
+  newItemDiv.id = `new-list-items-${activity}-${listTitleId}`;
+  section.appendChild(newItemDiv);
+  
+  const textInputDiv = document.createElement('div');
+  textInputDiv.className = 'text-input-line';
+  section.appendChild(textInputDiv);
+
+  const userInputLabel = document.createElement('label');
+  userInputLabel.setAttribute('for', 'user-input-text');
+  textInputDiv.appendChild(userInputLabel);
+
+  const textInput = document.createElement('input');
+  textInput.setAttribute('type', 'text');
+  textInput.setAttribute('name', `item-${activity}-${listTitleId}`);
+  textInput.id = `user-input-text-${activity}-${listTitleId}`;
+  userInputLabel.appendChild(textInput);
+
+  const addButton = document.createElement('button');
+  addButton.className = 'add-button';
+  addButton.id = `add-button-${activity}-${listTitleId}`;
+  textInputDiv.appendChild(addButton);
   
   // Render the html on the webpage
-  const htmlBlock = startListHtml + listItemsHtml + userListItemsHtml + endListHtml;
+
   const listsTarget = $('lists-container');
-  listsTarget.insertAdjacentHTML('beforeend', htmlBlock);
+  listsTarget.append(section);
 
   // Create the delete button listeners, which will delete the relevant list item, when clicked
   createDeleteButtonListeners(itemIds, activity, listTitleId);
