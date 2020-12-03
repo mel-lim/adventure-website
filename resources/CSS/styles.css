@@ -58,12 +58,21 @@ h4 {
   line-height: 0.2em;
 }
 
-p, figcaption, label, button {
+p, figcaption, label, button, input[type=text], textarea{
   font-family: 'Poiret One', cursive;
+}
+
+input[type=submit] {
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.25rem;
 }
 
 .item-name {
   font-weight: bolder;
+}
+
+.lighter-weight {
+  font-weight: lighter;
 }
 
 .list-panel hr {
@@ -313,7 +322,7 @@ footer {
 #tagline-and-questions-container {
   display: inline-block;
   border: 1px solid black;
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0, 4%, 95%);
   padding-left: 2em;
   padding-right: 2em;
   margin: 1rem 2rem 2em 2rem;
@@ -336,9 +345,6 @@ footer {
 #day-or-overnight-selection {
   display: none;
   justify-content: center;
-}
-
-.user-question {
 }
 
 .user-question label {
@@ -384,6 +390,84 @@ footer {
 
 #add-list-item {
   margin-right: 0;
+}
+
+/* Contact page */
+#contact-page-main {
+  text-align: center;
+}
+
+#contact-me-text-container {
+  display: inline-block;
+  border: 1px solid black;
+  background-color: hsl(0, 0%, 95%);
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 1rem 2rem 2em 2rem;
+  max-width: 600px;
+}
+
+#form-container {
+  max-width: 600px;
+  border: 1px solid black;
+  padding: 15px 15px 30px 15px;
+  margin: 15px auto 40px auto;
+  vertical-align: top;
+  background-color: hsl(0, 0%, 95%);
+  text-align: center;
+}
+
+#contact-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-row {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+#name, #email-address {
+  width: 45%;
+}
+
+#subject {
+  width: 100%;
+}
+
+#message {
+  width: 100%;
+}
+
+#contact-form input[type=text], #contact-form textarea {
+  padding: 5px 10px;
+}
+
+#contact-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+#submit-row {
+  justify-content: flex-end;
+}
+
+input[type=submit] {
+  cursor: pointer;
+  color: hsl(0, 0%, 30%);
+  padding: 5px 20px;
+  border: 1.5px solid hsl(0, 0%, 30%);
+  border-radius: 20px;
+  background-color: #f9f9f9;
+  font-weight: bolder;
+}
+
+input[type=submit]:hover {
+  color: black;
+  border-color: black;  
 }
 
 /* Natural breakpoint at 820px */
