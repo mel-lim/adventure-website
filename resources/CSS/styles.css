@@ -237,6 +237,10 @@ nav a:hover {
   padding-bottom: 0;
 }
 
+.collapsed-view-bike {
+  align-items: baseline;
+}
+
 .skis-icon {
   height: 30px;
   opacity: 0.6;
@@ -266,7 +270,7 @@ nav a:hover {
   padding: 0 20px;
 }
 
-.my-setup img {
+.expanded-view img {
   margin-top: 18px;
 }
 
@@ -306,7 +310,6 @@ main {
 }
 
 footer {
-  position: 
   width: 90%;
   text-align: center;
   height: 55px;
@@ -357,13 +360,6 @@ footer {
 
 #questions-for-user {
   margin-bottom: 1rem;
-}
-
-.test-button {
-  width: 25px;
-  height: 25px;
-  background-image: url('../icons/016-crossed.svg');
-  background-size: cover;
 }
 
 /* Lists */
@@ -480,7 +476,8 @@ input[type=submit] {
 
 input[type=submit]:hover {
   color: black;
-  border-color: black;  
+  border-color: black;
+}
 
 .delete-button, .add-button {
   background-size: cover;
@@ -555,6 +552,7 @@ width: 14px;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .adventures figure {
     margin-bottom: 1rem;
     width: 350px;
@@ -604,7 +602,7 @@ width: 14px;
     background-color: transparent;
   }
 
-  #hamburger-navigation-button img{
+  #hamburger-navigation-button img {
     width: 39px;
   }
 
