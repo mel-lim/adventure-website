@@ -140,7 +140,8 @@ nav a:hover {
   cursor: pointer;
   padding: 0.4em;
   border: transparent;
-  background-color: #f9f9f9;
+  background-color: hsla(0, 0%, 98%, 0.75);
+  opacity: 0.75;
   width: 39px;
   height: 39px;
   border-radius: 10%;
