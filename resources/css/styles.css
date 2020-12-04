@@ -219,6 +219,7 @@ nav a:hover {
 
 .setup-items-container {
   margin: 60px auto;
+  padding: 0 23px;
 }
 
 .setup-item {
