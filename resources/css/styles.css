@@ -481,6 +481,7 @@ input[type=submit]:hover {
 
 .delete-button, .add-button {
   background-size: contain;
+  background-repeat: no-repeat;
   flex-shrink: 0;
   border: none;
 }
